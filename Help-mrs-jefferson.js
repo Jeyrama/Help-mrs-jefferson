@@ -51,3 +51,5 @@ function shortestArrang(n) {
     return arr = [-1]
   }
 }
+
+// or
