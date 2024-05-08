@@ -23,3 +23,6 @@ Note:
   The value of n is unknown and may be high because some classes joined to to have fun with the game.
   the code should output [-1] in the case that no arrangement of the required feature is possible.
 */
+
+
+// Solution
