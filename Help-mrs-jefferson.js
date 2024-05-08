@@ -53,3 +53,21 @@ function shortestArrang(n) {
 }
 
 // or
+
+function shortestArrang(n) {
+  if (Math.log2(n) % 1 === 0)
+    return [ -1 ];
+    
+  let term = n / 2 | 0
+  ,  total = term * 2 + 1
+  , result = [ term + 1, term ];
+  
+  while (total != n) {
+    if (total > n)
+      total -= result.shift();
+
+    total += --term;
+    result.push(term);
+  }
+  return result;
+}
