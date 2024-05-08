@@ -26,3 +26,28 @@ Note:
 
 
 // Solution
+
+function shortestArrang(n) {  
+  let sum = 0,
+      arr = [],
+      start = Math.ceil(n / 2),
+      foundAnswer = false;
+  
+  while (!foundAnswer) {
+    for (let i = start; i > 0; i--) {
+      arr.push(i);
+      sum += i;
+      
+      if (sum > n) {
+        arr = [];
+        sum = 0;
+        i = start;
+        start--;
+      } else if (sum === n) {
+        foundAnswer = true;
+        return arr;
+      }
+    }
+    return arr = [-1]
+  }
+}
